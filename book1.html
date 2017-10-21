@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <style>
+         .ui-dialog.dialog-actionsheet .ui-dialog-contain {
+            margin-top: 0;
+         }
+      </style>
+      <script>
+         $( document ).on( "pagecreate", "#chap", function() {
+            $( document ).on( "swipeleft swiperight", "#chap", function( e ) {
+               if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                  if ( e.type === "swipeleft" ) {
+                     $( "#right-panel" ).panel( "open" );
+                  } else if ( e.type === "swiperight" ) {
+                     $( "#left-panel" ).panel( "open" );
+                  }
+               }
+            });
+         });
+      </script>
+
+   </head>
+
+   <body>
+      
+   <body>
+
+
+<div data-role = "page" id = "book">
+         <div data-role = "header">
+          <h1>ALL BOOKS</h1>
+         </div>
+
+
+<div data-role = "main" class = "ui-content">
+<div class = "ui-grid-b">
+            <div class = "ui-block-a">
+            
+                  
+           
+           <a href="#chap"><img src="img/image1.jpg"></a>         
+         </div>
+            
+         
+            <div class = "ui-block-b">
+              
+           
+           
+           <a href="#chap"><img src="img/image2.jpg"></a>
+               
+         </div>
+           
+
+            <div class = "ui-block-c">
+               
+            <a href="#chap"><img src="img/image3.jpg"></a>
+               
+         </div>
+            
+         </div>
+
+
+
+<div class = "ui-grid-b">
+            <div class = "ui-block-a">
+
+           
+           
+           <a href="#chap"><img src="img/image4.jpg"></a>         
+         </div>
+          
+         
+            <div class = "ui-block-b">
+           
+           
+           <a href="#chap"><img src="img/image5.jpg"></a>
+               
+         </div>
+          
+            <div class = "ui-block-c">
+
+           
+           
+           <a href="#chap"><img src="img/image6.jpg"></a>
+               
+         </div>
+          
+         </div>
+            
+      
+<div class = "ui-grid-b">
+            <div class = "ui-block-a">
+               
+           
+           <a href="#chap"><img src="img/image7.jpg"></a>         
+         </div>
+            
+            <div class = "ui-block-b">
+               
+           
+           <a href="#chap"><img src="img/image8.jpg"></a>
+               
+         </div>
+            
+
+            <div class = "ui-block-c">
+           
+           
+           <a href="#chap"><img src="img/image9.jpg"></a>
+               
+         </div>
+            </div>
+             <div class = "ui-block-a">
+               
+           
+           
+           <a href="#chap"><img src="img/image10.jpg"></a>
+               
+         </div>
+            </div>
+         </div>   
+
+
+
+       
+         
+         <div data-role = "footer">
+            <h1>Copyright by MAD4103 Fall2017 Class</h1>
+         </div>
+
+
+
+
+   
+
+
+
+<div data-role = "page" id = "mypage">
+         <div data-role = "header" data-theme = "b">
+            <h2>Header</h2>
+            <a href = "#left-panel" data-icon = "carat-r" data-iconpos = "notext"  
+               class = "ui-nodisc-icon">Open left panel</a>
+            <a href = "#right-panel" data-icon = "carat-l" data-iconpos = "notext" 
+               class = "ui-nodisc-icon">Open right panel</a>
+         </div>
+         
+         <div role = "main" class = "ui-content">
+            <p>Swipe the panel left or right.</p>
+         </div>
+         
+         <div data-role = "panel" id = "right-panel" data-theme = "b">
+            <p>This is left panel.</p>
+             
+
+
+
+<ul data-role = "listview">
+         <li><a href = "#chap"><img src="img/image1.jpg"></a></li>
+          <li><a href = "#chap"><img src="img/image2.jpg"></a></li>
+           <li><a href = "#chap"><img src="img/image3.jpg"></a></li>
+            <li><a href = "#chap"><img src="img/image4.jpg"></a></li>
+             <li><a href = "#chap"><img src="img/image5.jpg"></a></li>
+              <li><a href = "#chap"><img src="img/image6.jpg"></a></li>
+<li><a href = "#chap"><img src="img/image7.jpg"></a></li>
+              <li><a href = "#chap"><img src="img/image8.jpg"></a></li>
+                            <li><a href = "#chap"><img src="img/image9.jpg"></a></li>
+                                          <li><a href = "#chap"><img src="img/image10.jpg"></a></li>
+                                        </ul>
+
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-left">Close Panel</a>
+         </div>
+         
+         <div data-role = "panel" id = "right-panel" data-display = "push" 
+            data-position = "right" data-theme = "b">
+            <p>This is right panel.</p>
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-right">Close Panel</a>
+         </div>
+      </div>
+            
+
+
+
+
+
+
+
+      
+      <div data-role = "page" id = "chap">
+         <div data-role = "header" data-theme="b">
+            <h1>My Book Reader</h1>
+            <a href = "#left-panel" data-icon = "carat-r" data-iconpos = "notext"  
+               class = "ui-nodisc-icon">Open left panel</a>
+            <a href = "#right-panel" data-icon = "carat-l" data-iconpos = "notext" 
+               class = "ui-nodisc-icon">Open right panel</a>
+         </div>
+
+
+
+
+               <div data-role = "panel" id = "left-panel" data-theme = "b">
+            
+<p>panel.</p>
+
+
+<ul data-role = "listview">
+         <li><a href = "#chap"><img src="img/image1.jpg"></a></li>
+          <li><a href = "#chap"><img src="img/image2.jpg"></a></li>
+           <li><a href = "#chap"><img src="img/image3.jpg"></a></li>
+            <li><a href = "#chap"><img src="img/image4.jpg"></a></li>
+             <li><a href = "#chap"><img src="img/image5.jpg"></a></li>
+              <li><a href = "#chap"><img src="img/image6.jpg"></a></li>
+<li><a href = "#chap"><img src="img/image7.jpg"></a></li>
+              <li><a href = "#chap"><img src="img/image8.jpg"></a></li>
+                            <li><a href = "#chap"><img src="img/image9.jpg"></a></li>
+                                          <li><a href = "#chap"><img src="img/image10.jpg"></a></li>
+                                        </ul>
+
+            <a href = "#" data-rel = "close" class = "ui-btn ui-btn-inline ui-icon-delete 
+               ui-btn-icon-left">Close Panel</a>
+         </div>
+
+         <div data-role = "main" class = "ui-content">
+          <img src="img/image1.jpg">
+            <h2>STEPHEN KING</h2>
+            <h3>O. DARK TOWER </h3>
+
+            <p>hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+               William Sydney Porter (September 11, 1862 – June 5, 1910), known by his pen name O. Henry, was an American short story writer. His stories are known for their surprise endings.
+            </p>
+
+
+             
+            <a href="#ch1" data-transition = "turn" class="ui-btn">Read Book</a>           
+         </div>
+
+         <div data-role = "footer">
+           
+         </div>
+
+      </div>
+
+      <div data-role = "page" id = "ch1">
+         <div data-role = "header">
+            <h1>My Book Reader</h1>
+         </div>
+
+         <div data-role = "main" class = "ui-content">
+            <h2>Chapter 1</h2>
+            
+            <p>hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+               hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+            
+            <p>
+              hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+            </p>
+           
+            <p>
+
+              hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+           </p>
+
+           <div class = "ui-grid-b">
+            <div class = "ui-block-a">
+            
+                  <a href="#chap" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext 
+                  ui-btn-inline">Previous Chapter</a> 
+            </div>
+         
+            <div class = "ui-block-b">
+                  <a href="#chap" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext 
+                  ui-btn-inline">Home</a>
+            </div>
+
+            <div class = "ui-block-c">
+               
+                  <a href="#ch2" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext 
+                  ui-btn-inline">Next Chapter</a>
+            </div>
+         </div>
+           
+                       
+         </div>
+
+         <div data-role = "footer">
+            <h1>Copyright by MAD4103 Fall2017 Class</h1>
+         </div>
+      </div>
+
+      <div data-role = "page" id = "ch2">
+         <div data-role = "header">
+            <h1>My Book Reader</h1>
+         </div>
+
+         <div data-role = "main" class = "ui-content">
+            <h2>Chapter 2</h2>
+            
+            <p>hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+            </p>
+            <p>
+                "hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+            </p>
+            <p>   
+             hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+          </p>
+          <p>
+            hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.ne in ten."
+         </p>
+         <p>
+              After the doctor had gone Sue went into the workroom and cried a Japanese napkin to a pulp. Then she swaggered into Johnsy's room with her drawing board, whistling ragtime.
+         </p>
+            
+            
+           <div class = "ui-grid-b">
+            <div class = "ui-block-a">
+            
+                  <a href="#ch1" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext 
+                  ui-btn-inline">Previous Chapter</a> 
+            </div>
+         
+            <div class = "ui-block-b">
+                  <a href="#chap" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext 
+                  ui-btn-inline">Home</a>
+            </div>
+
+            <div class = "ui-block-c">
+               
+                  <a href="#ch3" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext 
+                  ui-btn-inline">Next Chapter</a>
+            </div>
+         </div>           
+         </div>
+
+         <div data-role = "footer">
+            <h1>Copyright by MAD4103 Fall2017 Class</h1>
+         </div>
+      </div>
+
+      <div data-role = "page" id = "ch3">
+         <div data-role = "header">
+            <h1>My Book Reader</h1>
+         </div>
+
+         <div data-role = "main" class = "ui-content">
+            <h2>Chapter 3</h2>
+            
+            <p>
+               In a little district west of Washington Square the streets have run crazy and broken hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+            </p>
+            
+            <p>
+              So, to quaint old Greenwich Village the art people soon came prowling, hunting for hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.th-century gables and Dutch attics and low rents. Then they imported some pewter mugs and a chafing dish or two from Sixth Avenue, and became a "colony."
+            </p>
+           
+            <p>
+hor falls off the coffee table and rolls under the couch. I scootch down, dig the fragile piece out of the dust bunnies and popcorn, and set him carefully on the coffee table.
+
+Dana moves her Valkyrie a few spaces toward my Odin. “You are so screwed, Rocky,” she gloats.
+
+Even though I’ve been out of chess competition for a year, my big sister is still the only one who can beat me. Dad tried grooming her for grandmastership a few years ago. But Dana has other plans. She’s going to be one of those scientists that combine two scarily difficult things, like astrophysicist or neurobiologist. She doesn’t have time for endless rounds of chess practice, club meetings, and tournaments.
+
+I was Dad’s consolation prize. I’m not as straight-out talented as Dana, but I love the game, and I don’t care if that makes me a geek. When my brain lights up with a series of moves it’s like tiny alternate universes playing out inside my head. The world just makes more sense when I’m playing chess or even thinking about it.
+
+At least, it did until about a year ago.
+
+Dad’s truck rumbles up the driveway just as Dana puts me in check. But the reprieve is not entirely welcome. The Norse Gods set is one of the fancy ones Dad gives me every birthday and Christmas. “These are not to play with,” he always cautions me. “These are collectors’ items.” I try to appreciate his gifts, but I can’t help wishing I’d get Celtics tickets or a new gaming console instead. So sometimes I play with them anyway.
+              At the top of a squatty, three-story brick Sue and Johnsy had their studio. "Johnsy" was familiar for Joanna. One was from Maine; the other from California. They had met at the table d'hôte of an Eighth Street "Delmonico's," and found their tastes in art, chicory salad and bishop sleeves so congenial that the joint studio resulted.
+           </p>
+           <div class = "ui-grid-b">
+            <div class = "ui-block-a">
+            
+                  <a href="#ch2" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext 
+                  ui-btn-inline">Previous Chapter</a> 
+            </div>
+         
+            <div class = "ui-block-b">
+                  <a href="#chaps" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext 
+                  ui-btn-inline">Home</a>
+            </div>
+
+            <div class = "ui-block-c">
+               
+                  <a href="#ch3" data-transition = "turn" class = "ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext 
+                  ui-btn-inline">Next Chapter</a>
+            </div>
+         </div>
+                      
+         </div>
+
+         <div data-role = "footer">
+            <h1>Copyright by MAD4103 Fall2017 Class</h1>
+         </div>
+      </div>
+   </body>
+</html>
